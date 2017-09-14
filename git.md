@@ -1,5 +1,4 @@
-﻿originally taken from https://github.com/zacanger/doc/blob/master/git.md
-# GIT
+﻿# GIT
 
 ## Basics
 
@@ -541,3 +540,6 @@ git diff --name-status TAG2 TAG1 | wc -l      # count modified files
   path = path-of-submodule
   url = http://url.of/submodule.git
 ```
+
+--------
+originally taken from https://github.com/zacanger/doc/blob/master/git.md

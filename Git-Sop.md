@@ -44,7 +44,7 @@ Everything in Git is check-summed before it is stored and is then referred to by
 
 You can&#39;t lose information in transit or get file corruption without Git being able to detect it. The mechanism that Git uses for this checksumming is called a **SHA-1 hash**. This is a 40-character string composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git. A SHA-1 hash looks something like this:
 
-_24b9da6552252987aa493b52f8696cd6d3b00373_
+    24b9da6552252987aa493b52f8696cd6d3b00373
 
 You will see these **hash values** all over the place in Git because it uses them so much. In fact, Git stores everything in its database not by file name but by the hash value of its contents.
 
@@ -93,106 +93,111 @@ And if it was changed since it was checked out but has not been staged, **it is 
 ## [40 Terminal Tips and Tricks You Never Thought You Needed](http://computers.tutsplus.com/tutorials/40-terminal-tips-and-tricks-you-never-thought-you-needed--mac-51192)
 https://computers.tutsplus.com/tutorials/40-terminal-tips-and-tricks-you-never-thought-you-needed--mac-51192
 
+---------
+
 1) When you open your terminal (on Mac):
 
 
 2) Your first step will be to **Change the Directory** to one of the servers (or repositories) we use:
 
- cd ~/Repository/path/[REPOSITORY NAME]
-
+     cd ~/Repository/path/[REPOSITORY NAME]
 
 3) Once there, you can either work on a &#39; **branch&#39;** you&#39;ve already created or **create a new branch** , for a new issue.
 
-   a) To see branches you&#39;ve been working on, type: git branch
+a) To see branches you&#39;ve been working on, type: 
 
+    git branch
 
 b) To **create a new** branch, type: git checkout –b [branch name- that is the issue number]
 
-git checkout -b [BRANCH NAME]
+	git checkout -b [BRANCH NAME]
 
 c) To transfer to a different branch:
 
-git checkout [BRANCH NAME]
+    git checkout [BRANCH NAME]
 
 When you have finished working on a file and you now want to &quot;commit&quot;
 
 d) Type the following on Git
 
-git status
+    git status
 
-
-#### Uploading files.
+### Pushing files.
 
 At this point, a list of files will appear telling you what needs to be staged so you can commit it.
 
-     1-&gt;So, you make a change to a file and save it: type git status to see which files have been changed:
+  1-&gt;So, you make a change to a file and save it to see which files have been changed type
 
+       git status
+
+   
 
 2-&gt;then, type:
 
-git add --all ![]
+    git add --all
 
-( note if you don&#39;t want to add file (it&#39;s the wrong file, added by mistake, etc) you can undo this by typing:
+( note if you don&#39;t want to add file that is on the list (it&#39;s the wrong file, added by mistake, etc) you can remove a file by typing:
 
-git checkout [filename]  )
+    git checkout [filename]  
 
 3-&gt; commit:
 
-git commit
-
+    git commit
 
 This will bring you to a screen where you must use VI commands:
 
-dw to delete the # in front of the files changed
+`dw` to delete the `#` in front of the files changed
 
-I to insert a brief descriptive message
+`I` to insert a brief descriptive message
 
-:wq to close out the window and go back to the main page
+`:wq` to close out the window and go back to the main page
 
-Any line with a preceding # will be hidden / removed from the commit message
-
-Before:
-
-
-After:
-
-
-This will then return you to the main page with this message:
-
-
+Any line with a preceding `#` will be hidden / removed from the commit message
 
 
 
 4-&gt; Next step is to push it to the repository. Type:
 
-git push
+    git push
 
-#### Other things:
+#### Other things: to note
 
 To remove a file from the database:
 
-rm [file name]
+    rm [file name]
 
 To see files you adjusted in the past:
 
-git log
+    git log
 
 To Rename your branch
 
-git branch -m [newname]
+    git branch -m [newname]
 
 To Delete a branch
 
-git branch -d [branch name]
-
+    git branch -d [branch name]
 
 
 If you push a file and it doesn&#39;t work (but doesn&#39;t conflict out, You&#39;ll know the difference)
 
-rm -rf ~/.ssh/known\_hosts
+    rm -rf ~/.ssh/known\_hosts
 
 this command removes a file called known\_hosts on your local machine. .ssh is the type of way you are logging on to your a server.. and instead of running through sequence of reinputting your key every time you login to the server.. known\_hosts remember&#39;s that you did already
 
-#### CONFLICTS:
+### CONFLICTS:
 
 **NEVER WORK ON THE SAME FILE USING TWO DIFFERENT BRANCHES** - it will conflict when you push your branch, not only for you, **but for everyone**** else**.  (I&#39;ve done this before…) Wait until a file has been pushed live (master) to work on it using a different branch.
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-﻿git.md
+﻿originally taken from https://github.com/zacanger/doc/blob/master/git.md
 # GIT
 
 ## Basics

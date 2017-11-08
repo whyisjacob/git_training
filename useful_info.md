@@ -1,6 +1,11 @@
 Useful Information
 ------------------
 
+**Remove/Delete already merged branches**
+
+
+    git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d
+
 **If GIT doesn’t work when pushing something**
 try running this command
 

@@ -2,6 +2,7 @@ Useful Information
 ------------------
 
 **Remove/Delete already merged branches**
+Warning, has potential to delete master, if master is deleted just recreate it following the standard branch creation method
 
 
     git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d

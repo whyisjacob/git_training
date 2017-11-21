@@ -1,6 +1,15 @@
 Useful Information
 ------------------
 
+**View Git / Terminal History**
+
+    $ history
+Returns a list of all your terminal commands
+
+    $ git reflog
+will show all the positions that your HEAD was following, it will not actually show all the git commands. Git commands that don’t move the head (for example `git branch -D my_precious_branch` ) would not show up there
+
+
 **Remove/Delete already merged branches**
 Warning, has potential to delete master, if master is deleted just recreate it following the standard branch creation method
 
